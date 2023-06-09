@@ -14,7 +14,7 @@ class MatrixClass():
         self.matrix = RGBMatrix(options = self.options)
 
         # initialize fonts and canvas
-        fontPath = "/home/noah/MTAGRBMatrix/eight-bit-dragon.otf" # replace with font path
+        fontPath = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"  # replace with desired font path
         self.font = ImageFont.truetype(fontPath, size=24)
         self.canvas = Image.new("RGB", (self.options.cols, self.options.rows))
         self.draw = ImageDraw.Draw(self.canvas)
@@ -23,15 +23,14 @@ class MatrixClass():
         self.matrix.Clear()
         text_width, text_height = self.draw.textsize(text, font=self.font)
         x = self.options.cols
-        y = 4
+        y = 2
 
         while x > -text_width:
             self.canvas = Image.new("RGB", (self.options.cols, self.options.rows))
             self.draw = ImageDraw.Draw(self.canvas)
-            self.draw.text((x, y), text, font=self.font, fill=(255, 255, 0))
+            self.draw.text((x, y), text, font=self.font, fill=(255, 0, 0))
             self.matrix.SetImage(self.canvas.convert('RGB'))
-            self.matrix.SwapOnVSync()
-            x -= 1  # Adjust the scrolling speed here
+            x -= 0.1  # Adjust the scrolling speed here
 
     
 
