@@ -18,6 +18,8 @@ class MTARGBMatrix():
         processed_train_ids = set()
         subway_lines = ["1", "2", "3", "4", "5", "6", "7", "A", "C", "E", "B", "D", "F", "M", "G", "J", "Z", "L", "N", "Q", "R", "W", "S"]
         now = datetime.now()
+        self.uptown_trains = []
+        self.downtown_trains = []
 
 
         for line in subway_lines:
