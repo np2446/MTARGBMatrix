@@ -11,9 +11,8 @@ def main():
      while True:
         mta.collectData()
 
-        for _ in range(3):
-           rgb.displayText(mta.uptownString)
-           rgb.displayText(mta.downtownString)
+        for _ in range(16):
+           rgb.displayText(mta.uptownString, mta.downtownString)
 
     except KeyboardInterrupt:
         print("User interrupted program. Exiting...")
