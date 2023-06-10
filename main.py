@@ -4,7 +4,6 @@ import sys
 import time
 
 def main():
-    print("hello world")
     mta = MTARGBMatrix(STATION)
     rgb = MatrixClass()
 
