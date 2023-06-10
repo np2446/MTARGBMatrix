@@ -9,6 +9,7 @@ def main():
 
     try:
      while True:
+        rgb.staticText("Refreshing")
         mta.collectData()
 
         for _ in range(16):
