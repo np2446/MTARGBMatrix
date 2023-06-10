@@ -63,16 +63,16 @@ The repository consists of the following Python scripts:
 
 ## Usage
 
-To run the program, use the following command:
+To run the program, use the following command (running as sudo is necessary since it interacts with hardware):
 
 
-    python3 main.py [STATION_ID]
+    sudo python3 main.py [STATION_ID]
     
 Replace `[STATION_ID]` with the station ID for which you want to display the train arrivals. You can find the station ids in the included `stationCSV.csv` file.
 
 For example, to get information for Times Square-42nd Street, you would use:
 
-    python3 main.py "R16"
+    sudo python3 main.py "R16"
 
 
 The program will continuously display the uptown and downtown train schedules for the specified station on the RGB LED Matrix. Press `CTRL+C` to stop the program.
