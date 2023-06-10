@@ -11,6 +11,7 @@ class MatrixClass():
         self.options.chain_length = 1
         self.options.parallel = 1
         self.options.hardware_mapping = 'adafruit-hat'
+        self.options.gpio_slowdown = 2 # necessary for pi 3/4, comment out or change to zero on pi 1/2 or zero
         self.matrix = RGBMatrix(options = self.options)
 
         # initialize fonts and canvas
