@@ -20,6 +20,13 @@ class MatrixClass():
         self.canvas = Image.new("RGB", (self.options.cols, self.options.rows))
         self.draw = ImageDraw.Draw(self.canvas)
 
+    def staticText(self, text):
+        self.matrix.Clear()
+        self.canvas = Image.new("RGB", (self.options.cols, self.options.rows))
+        self.draw = ImageDraw.Draw(self.canvas)
+        self.draw.text((0,0), text, font = self.font, fill(255,0,0))
+        self.matrix.SetImage(self.canvas.convert('RGB'))
+        
     def displayText(self, text1, text2):
         self.matrix.Clear()
         text_width, text_height = self.draw.textsize(text1, font=self.font)
@@ -28,7 +35,7 @@ class MatrixClass():
         y2 = 17
 
         while x > -text_width:
-            self.canvas = Image.new("RGB", (self.options.cols, self.options.row>
+            self.canvas = Image.new("RGB", (self.options.cols, self.options.rows))
             self.draw = ImageDraw.Draw(self.canvas)
             self.draw.text((x, y1), text1, font=self.font, fill=(255, 255, 0))
             self.draw.text((x,y2), text2, font=self.font, fill=(255,0,0))
